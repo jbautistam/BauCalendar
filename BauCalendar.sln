@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BauCalendar", "BauCalendar\BauCalendar.csproj", "{8098E826-C3C1-4CCB-B452-BDAFBC2AAAED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCalendar", "TestCalendar\TestCalendar.csproj", "{F71C48DE-86CC-4947-B500-E4B2AA78DE2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8098E826-C3C1-4CCB-B452-BDAFBC2AAAED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8098E826-C3C1-4CCB-B452-BDAFBC2AAAED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8098E826-C3C1-4CCB-B452-BDAFBC2AAAED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8098E826-C3C1-4CCB-B452-BDAFBC2AAAED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F71C48DE-86CC-4947-B500-E4B2AA78DE2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F71C48DE-86CC-4947-B500-E4B2AA78DE2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F71C48DE-86CC-4947-B500-E4B2AA78DE2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F71C48DE-86CC-4947-B500-E4B2AA78DE2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E224F93D-E597-4864-9337-4305FEFF3D3B}
+	EndGlobalSection
+EndGlobal
