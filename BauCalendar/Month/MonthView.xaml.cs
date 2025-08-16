@@ -29,48 +29,46 @@ public partial class MonthView : UserControl
 	/// </summary>
 	private void Update()
 	{
-		// Limpia los grids
-		grdDaysOfWeek.Children.Clear();
-		grdMonth.Children.Clear();
-		// Cambia el título
-		lblTitle.Content = Date.ToShortMonthName();
-		// Añade los nombres de los días de la semana
-		AddDaysOfWeek();
-		// Añade los días
-		AddDays();
+		DateTime start = GetMonday(new DateTime(Date.Year, Date.Month, 1));
+
+			// Limpia los grids
+			grdDaysOfWeek.Children.Clear();
+			grdMonth.Children.Clear();
+			// Cambia el título
+			lblTitle.Content = Date.ToShortMonthName();
+			// Añade los nombres de los días de la semana
+			AddDaysOfWeek(start);
+			// Añade los días
+			AddDays(start);
 	}
 
 	/// <summary>
 	///		Añade los días de la semana
 	/// </summary>
-	private void AddDaysOfWeek()
+	private void AddDaysOfWeek(DateTime start)
 	{
-		DateTime start = GetMonday(Date);
+		for (int index = 0; index < 7; index++)
+		{
+			Label label = new();
 
-			// Añade los días de la semana
-			for (int index = 0; index < 7; index++)
-			{
-				Label label = new();
-
-					// Crea la etiqueta
-					label.Content = start.AddDays(index).ToWeekDayName();
-					label.HorizontalAlignment = HorizontalAlignment.Stretch;
-					label.VerticalAlignment = VerticalAlignment.Stretch;
-					label.Padding = new Thickness(5);
-					label.HorizontalContentAlignment = HorizontalAlignment.Center;
-					label.Background = new SolidColorBrush(Colors.Blue);
-					label.Foreground = new SolidColorBrush(Colors.White);
-					// Añade el nombre del día al grid
-					grdDaysOfWeek.Children.Add(label);
-			}
+				// Crea la etiqueta
+				label.Content = start.AddDays(index).ToWeekDayName();
+				label.HorizontalAlignment = HorizontalAlignment.Stretch;
+				label.VerticalAlignment = VerticalAlignment.Stretch;
+				label.Padding = new Thickness(5);
+				label.HorizontalContentAlignment = HorizontalAlignment.Center;
+				label.Background = new SolidColorBrush(Colors.Blue);
+				label.Foreground = new SolidColorBrush(Colors.White);
+				// Añade el nombre del día al grid
+				grdDaysOfWeek.Children.Add(label);
+		}
 	}
 
 	/// <summary>
 	///		Añade los días
 	/// </summary>
-	private void AddDays()
+	private void AddDays(DateTime start)
 	{
-		DateTime start = GetMonday(Date);
 		DateTime end = new DateTime(Date.Year, Date.Month, DateTime.DaysInMonth(Date.Year, Date.Month));
 
 			// Busca el último domingo del mes
